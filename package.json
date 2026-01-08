@@ -1,11 +1,57 @@
 {
-  "name": "pulserelief-fullstack",
+  "name": "pulserelief",
   "version": "1.0.0",
-  "private": true,
-  "main": "backend/server.js",
+  "description": "PulseRelief - Instant, Trustworthy Emergency Fundraising Platform",
+  "main": "script.js",
   "scripts": {
-    "dev": "npm --prefix backend run dev",
-    "start": "npm --prefix backend start",
-    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install"
+    "start": "http-server -p 8080 -c-1",
+    "dev": "firebase emulators:start",
+    "test": "jest",
+    "build": "webpack",
+    "deploy": "firebase deploy && gcloud functions deploy --all",
+    "deploy:functions": "gcloud functions deploy processPayment fraudCheck trackEvent dialogflowWebhook",
+    "deploy:firebase": "firebase deploy",
+    "deploy:cloud-run": "gcloud run deploy pulserelief",
+    "logs": "gcloud functions logs read",
+    "bigquery:create-tables": "bq mk analytics_dataset && bq mk --table analytics_dataset.events eventName:STRING,eventData:JSON,timestamp:TIMESTAMP"
+  },
+  "keywords": [
+    "emergency",
+    "fundraising",
+    "donations",
+    "crisis",
+    "humanitarian"
+  ],
+  "author": "PulseRelief Team",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^10.0.0",
+    "firebase-admin": "^11.0.0",
+    "firebase-functions": "^4.0.0",
+    "stripe": "^12.0.0",
+    "@google-cloud/bigquery": "^6.0.0",
+    "@google-cloud/dialogflow": "^5.0.0",
+    "@google-cloud/kms": "^3.0.0",
+    "@google-cloud/logging": "^10.0.0",
+    "express": "^4.18.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "helmet": "^7.0.0",
+    "bcryptjs": "^2.4.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^9.0.0",
+    "firebase-tools": "^11.0.0",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }

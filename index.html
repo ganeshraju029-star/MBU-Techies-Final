@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseRelief – Instant, Trustworthy Emergency Fundraising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <span class="logo-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                            <defs>
+                                <linearGradient id="pulseGradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#ec4899" />
+                                    <stop offset="100%" stop-color="#6366f1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="14" fill="url(#pulseGradient)" opacity="0.95" />
+                            <polyline points="6,18 11,18 14,12 18,22 22,18 26,18" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="logo-text">Pulse<span>Relief</span></span>
+                </div>
+                <nav class="nav-primary" id="nav-primary" aria-label="Primary navigation">
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#live-cases">Live emergencies</a>
+                    <a href="#crisis-map">Crisis map</a>
+                    <a href="#get-started" class="nav-cta">Get help</a>
+                </nav>
+            </div>
+            <nav class="nav" id="nav" aria-label="All navigation">
+                <a href="#how-it-works">How it works</a>
+                <a href="#live-cases">Live emergencies</a>
+                <a href="#crisis-map">Crisis map</a>
+                <a href="#impact-reports">Impact reports</a>
+                <a href="#advanced-verification">Verification</a>
+                <a href="#faq">FAQ</a>
+                <a href="#get-started" class="nav-cta">Get help</a>
+            </nav>
+            <div class="header-right">
+                <button class="mode-toggle" id="mode-toggle" aria-label="Toggle color mode">
+                    <span class="mode-icon mode-icon-light">☀</span>
+                    <span class="mode-icon mode-icon-dark">☾</span>
+                </button>
+                <button class="dashboard-toggle" id="dashboard-toggle" aria-label="Open dashboard">
+                    <span class="dashboard-icon">👤</span>
+                </button>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="hero" id="get-started">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>Emergency funds in hours, not weeks.</h1>
+                    <p>
+                        PulseRelief connects verified urgent cases with ready donors in real-time.
+                        Simple flows, radical transparency, and rapid disbursement when every minute matters.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn primary" data-open-modal="request-modal">Request emergency help</button>
+                        <button class="btn secondary" data-scroll-to="#live-cases">Support a live case</button>
+                    </div>
+                    <div class="hero-meta">
+                        <div>
+                            <strong>&lt; 30 min</strong>
+                            <span>average case pre-screen</span>
+                        </div>
+                        <div>
+                            <strong>92%</strong>
+                            <span>of funds disbursed in &lt; 4 hours</span>
+                        </div>
+                        <div>
+                            <strong>Global</strong>
+                            <span>donors &amp; responders network</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-panel dashboard-panel">
+                    <div class="panel-header">
+                        <div class="status-pulse">LIVE IMPACT ANALYTICS</div>
+                        <span class="live-indicator">● LIVE</span>
+                    </div>
+                    
+                    <div class="impact-stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-ring" data-percent="68" style="--percent: 68; --ring-color: #1a73e8;">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="ring-fg" stroke-dasharray="68, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="ring-text">68%</span>
+                            </div>
+                            <span class="stat-label">Medical ICU</span>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-ring" data-percent="41" style="--percent: 41; --ring-color: #6366f1;">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="ring-fg" stroke-dasharray="41, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="ring-text">41%</span>
+                            </div>
+                            <span class="stat-label">Disaster Relief</span>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-ring" data-percent="100" style="--percent: 100; --ring-color: #22c55e;">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="ring-fg" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="ring-text">100%</span>
+                            </div>
+                            <span class="stat-label">Education</span>
+                        </div>
+                    </div>
+
+                    <div class="funding-trends">
+                        <div class="trend-header">
+                            <span>Funding Velocity (24h)</span>
+                            <span class="trend-value">+12.4%</span>
+                        </div>
+                        <div class="mini-bar-chart">
+                            <div class="bar" style="height: 40%"></div>
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 45%"></div>
+                            <div class="bar" style="height: 80%"></div>
+                            <div class="bar" style="height: 55%"></div>
+                            <div class="bar active" style="height: 90%"></div>
+                            <div class="bar" style="height: 70%"></div>
+                        </div>
+                    </div>
+
+                    <p class="ticker-footnote">Real-time data synced via Firebase</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="how-it-works">
+            <div class="container">
+                <h2>How PulseRelief works in critical moments</h2>
+                <p class="section-lead">
+                    Built to remove the friction that slows down traditional fundraising when time is critical.
+                </p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Signal the emergency</h3>
+                        <p>
+                            A patient, family member, or vetted partner submits a short, mobile-first request
+                            with only the essentials: what happened, where, how much is needed, and how fast.
+                            Voice-based requests available for accessibility.
+                        </p>
+                        <div class="card-icons">
+                            <span>⚡</span>
+                            <span>📍</span>
+                            <span>🎤</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Rapid, layered verification</h3>
+                        <p>
+                            Partner hospitals, NGOs, or schools validate the case with lightweight digital proofs,
+                            while our risk engine cross-checks documents, location, and history in minutes.
+                            AI-powered document verification and blockchain-based records ensure trust.
+                        </p>
+                        <div class="card-icons">
+                            <span>✅</span>
+                            <span>🔐</span>
+                            <span>🤖</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Instant storytelling for donors</h3>
+                        <p>
+                            A clear, one-screen story is generated automatically: what is needed now, what has
+                            been verified, and how funds will be released in stages. Real-time impact reporting
+                            shows exactly how funds are used.
+                        </p>
+                        <div class="card-icons">
+                            <span>📝</span>
+                            <span>🎯</span>
+                            <span>👁️</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Smart disbursement & tracking</h3>
+                        <p>
+                            Funds are routed directly to medical providers, schools, or relief operators where
+                            possible, with a live ledger showing every transaction and update. Smart contracts
+                            enable automated milestone-based releases.
+                        </p>
+                        <div class="card-icons">
+                            <span>💸</span>
+                            <span>📊</span>
+                            <span>🔗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="live-cases">
+            <div class="container">
+                <div class="section-header-row">
+                    <div>
+                        <h2>Live emergencies seeking support</h2>
+                        <p class="section-lead">
+                            Real-time, pre-screened cases. Transparent progress. You always know the impact of your help.
+                        </p>
+                    </div>
+                    <div class="pill-switch" id="category-switch">
+                        <button data-category="all" class="active">All</button>
+                        <button data-category="medical">Medical</button>
+                        <button data-category="education">Education</button>
+                        <button data-category="disaster">Disaster relief</button>
+                        <button data-category="startup">Small startups</button>
+                    </div>
+                </div>
+
+                <div class="case-grid" id="case-grid">
+                    <article class="case-card" data-category="medical">
+                        <div class="case-tag medical">Medical • ICU</div>
+                        <h3>Emergency surgery for road accident victim</h3>
+                        <p class="case-location">Nairobi, Kenya</p>
+                        <p class="case-summary">
+                            Verified by County General Hospital. Funds go directly to hospital billing to cover
+                            surgery and 48 hours of intensive care.
+                        </p>
+                        <div class="case-progress">
+                            <div class="progress-bar"><span style="width: 62%"></span></div>
+                            <div class="progress-meta">
+                                <span>$6,200 of $10,000</span>
+                                <span>62% funded</span>
+                            </div>
+                        </div>
+                        <div class="card-icons">
+                            <span>❤️</span>
+                            <span>⚡</span>
+                            <span>🌍</span>
+                        </div>
+                        <button class="btn ghost" data-open-modal="donate-modal">Support this now</button>
+                        
+                        <!-- Emergency Timeline -->
+                        <div class="case-timeline">
+                            <div class="timeline-step completed">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Submitted</span>
+                            </div>
+                            <div class="timeline-step completed">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Verified</span>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Funded</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Resolved</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card" data-category="disaster">
+                        <div class="case-tag disaster">Disaster relief • Floods</div>
+                        <h3>Clean water & shelter kits after flash floods</h3>
+                        <p class="case-location">Assam, India</p>
+                        <p class="case-summary">
+                            Coordinated with two local NGOs. Each kit includes water filters, blankets, and
+                            emergency food rations for a family of five.
+                        </p>
+                        <div class="case-progress">
+                            <div class="progress-bar"><span style="width: 44%"></span></div>
+                            <div class="progress-meta">
+                                <span>$8,800 of $20,000</span>
+                                <span>44% funded</span>
+                            </div>
+                        </div>
+                        <div class="card-icons">
+                            <span>💧</span>
+                            <span>🏠</span>
+                            <span>🌏</span>
+                        </div>
+                        <button class="btn ghost" data-open-modal="donate-modal">Fund relief kits</button>
+
+                        <!-- Emergency Timeline -->
+                        <div class="case-timeline">
+                            <div class="timeline-step completed">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Submitted</span>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Verified</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Funded</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Resolved</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card" data-category="education">
+                        <div class="case-tag education">Education • Scholarship</div>
+                        <h3>Keep a first-gen student enrolled this semester</h3>
+                        <p class="case-location">Cape Town, South Africa</p>
+                        <p class="case-summary">
+                            University bursary office verified tuition bill. Funds disbursed directly to the
+                            institution on confirmation.
+                        </p>
+                        <div class="case-progress">
+                            <div class="progress-bar"><span style="width: 88%"></span></div>
+                            <div class="progress-meta">
+                                <span>$4,400 of $5,000</span>
+                                <span>88% funded</span>
+                            </div>
+                        </div>
+                        <div class="card-icons">
+                            <span>🎓</span>
+                            <span>📚</span>
+                            <span>✨</span>
+                        </div>
+                        <button class="btn ghost" data-open-modal="donate-modal">Complete their semester</button>
+
+                        <!-- Emergency Timeline -->
+                        <div class="case-timeline">
+                            <div class="timeline-step completed">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Submitted</span>
+                            </div>
+                            <div class="timeline-step completed">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Verified</span>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Funded</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Resolved</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card" data-category="startup">
+                        <div class="case-tag startup">Small startup • Crisis bridge</div>
+                        <h3>Keep community clinic software online</h3>
+                        <p class="case-location">Medellín, Colombia</p>
+                        <p class="case-summary">
+                            A small health-tech startup powering 22 clinics faces unexpected infrastructure costs.
+                            Bridge funds prevent a shutdown of patient records and triage tools.
+                        </p>
+                        <div class="case-progress">
+                            <div class="progress-bar"><span style="width: 29%"></span></div>
+                            <div class="progress-meta">
+                                <span>$5,800 of $20,000</span>
+                                <span>29% funded</span>
+                            </div>
+                        </div>
+                        <div class="card-icons">
+                            <span>💻</span>
+                            <span>🏥</span>
+                            <span>🧩</span>
+                        </div>
+                        <button class="btn ghost" data-open-modal="donate-modal">Back this mission</button>
+
+                        <!-- Emergency Timeline -->
+                        <div class="case-timeline">
+                            <div class="timeline-step active">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Submitted</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Verified</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Funded</span>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Resolved</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- After-Action Reports Section -->
+        <section class="section" id="impact-reports">
+            <div class="container">
+                <div class="section-header-row">
+                    <div>
+                        <h2>After-Action Reports</h2>
+                        <p class="section-lead">
+                            Transparency in action. See exactly how funds were utilized and the impact your contributions achieved.
+                        </p>
+                    </div>
+                    <div class="pill-switch" id="report-category-switch">
+                        <button data-category="all" class="active">All Impact</button>
+                        <button data-category="medical">Medical</button>
+                        <button data-category="disaster">Disaster</button>
+                        <button data-category="education">Education</button>
+                    </div>
+                </div>
+
+                <div class="report-grid" id="impact-reports-grid">
+                    <!-- Reports will be dynamically populated -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="advanced-verification">
+            <div class="container">
+                <div class="section-header-row">
+                    <div>
+                        <h2>Advanced Verification & Disbursement</h2>
+                        <p class="section-lead">
+                            Our cutting-edge technology ensures rapid, secure, and transparent emergency fundraising.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>AI-Powered Document Verification</h3>
+                        <p>
+                            Our AI system automatically verifies documents using OCR and machine learning,
+                            reducing verification time from hours to minutes.
+                        </p>
+                        <div class="card-icons">
+                            <span>🤖</span>
+                            <span>👁️</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Blockchain-Based Security</h3>
+                        <p>
+                            Immutable records on blockchain technology ensure all verification steps
+                            are permanently recorded and tamper-proof.
+                        </p>
+                        <div class="card-icons">
+                            <span>🔗</span>
+                            <span>🔒</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Smart Contract Disbursement</h3>
+                        <p>
+                            Automated fund releases based on predefined milestones using smart contracts,
+                            ensuring funds reach the right place at the right time.
+                        </p>
+                        <div class="card-icons">
+                            <span>💸</span>
+                            <span>⚙️</span>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Real-Time Impact Tracking</h3>
+                        <p>
+                            Donors can track exactly how their funds are used through live video updates
+                            and detailed impact reports.
+                        </p>
+                        <div class="card-icons">
+                            <span>📹</span>
+                            <span>📈</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="crisis-map">
+            <div class="container map-layout">
+                <div>
+                    <h2>Global crisis map</h2>
+                    <p class="section-lead">
+                        Visualize verified emergencies across regions in real time. Each marker represents a live or recently funded case.
+                    </p>
+                    <ul class="map-legend">
+                        <li><span class="legend-dot medical"></span> Medical</li>
+                        <li><span class="legend-dot disaster"></span> Disaster relief</li>
+                        <li><span class="legend-dot education"></span> Education</li>
+                        <li><span class="legend-dot startup"></span> Startup crisis</li>
+                    </ul>
+                    <p class="map-note">
+                        Powered by Google Maps to give donors geographic context when every minute matters.
+                    </p>
+                </div>
+                <div class="map-panel">
+                    <div id="map" aria-label="Emergency crisis map"></div>
+                    <p class="map-footnote">
+                        Locations are sample data for demo purposes. In production, emergencies would stream in live from real partners.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="trust">
+            <div class="container trust-layout">
+                <div>
+                    <h2>Trust is built into every step</h2>
+                    <p class="section-lead">
+                        Every constraint you mentioned is intentionally addressed in PulseRelief's design.
+                    </p>
+                    <ul class="trust-list">
+                        <li>
+                            <strong>Rapid verification, not endless paperwork.</strong>
+                            Multi-source validation (partners, documents, metadata) runs in parallel for fast approvals. AI-powered document verification and real-time checks accelerate the process.
+                        </li>
+                        <li>
+                            <strong>Instant, traceable disbursement.</strong>
+                            Whenever possible, funds go directly to service providers with a live, public ledger. Smart contracts enable automated milestone-based releases.
+                        </li>
+                        <li>
+                            <strong>Radical transparency by default.</strong>
+                            Clear case status, verification badges, and release milestones visible to everyone. Blockchain-based immutable records ensure trust.
+                        </li>
+                        <li>
+                            <strong>Interfaces built for stress.</strong>
+                            Single-screen flows, big actions, and plain language designed for people in crisis. Voice-based requests available for accessibility.
+                        </li>
+                        <li>
+                            <strong>Global donor reach for local emergencies.</strong>
+                            Cases are auto-localized and distributed across multiple donor channels in minutes.
+                        </li>
+                    </ul>
+                </div>
+                <div class="trust-panel">
+                    <h3>Verification snapshot</h3>
+                    <div class="badge-row">
+                        <span class="badge">Hospital verified</span>
+                        <span class="badge">Document checked</span>
+                        <span class="badge">Geo-matched</span>
+                        <span class="badge">Risk-screened</span>
+                        <span class="badge">AI-verified</span>
+                        <span class="badge">Blockchain-secured</span>
+                    </div>
+                    <p>
+                        Donors see exactly who has verified each case, when, and how. No hidden steps, no vague claims—
+                        just a clear verification story with blockchain-secured records.
+                    </p>
+                    <div class="mini-timeline">
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:14</strong>
+                                <span>Case submitted from mobile app</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:21</strong>
+                                <span>Hospital uploads bill &amp; confirmation</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:25</strong>
+                                <span>AI-powered document verification complete</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:32</strong>
+                                <span>Risk engine passes checks</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:35</strong>
+                                <span>Blockchain record created</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="dot"></span>
+                            <div>
+                                <strong>10:40</strong>
+                                <span>Case published to donors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="partners">
+            <div class="container partners-layout">
+                <div>
+                    <h2>Built for hospitals, schools, NGOs & startups</h2>
+                    <p class="section-lead">
+                        Integrate PulseRelief into your existing workflows so you can trigger support instantly when crises hit.
+                    </p>
+                    <ul class="partner-list">
+                        <li>
+                            <strong>Hospitals & clinics</strong>
+                            can raise verified medical cases directly from their systems.
+                        </li>
+                        <li>
+                            <strong>Schools & universities</strong>
+                            can trigger emergency tuition or device support for students.
+                        </li>
+                        <li>
+                            <strong>Disaster relief NGOs</strong>
+                            can broadcast needs in targeted micro-campaigns within minutes of an event.
+                        </li>
+                        <li>
+                            <strong>Small startups & social enterprises</strong>
+                            can request bridge funding to survive shocks without predatory loans.
+                        </li>
+                    </ul>
+                </div>
+                <div class="partner-panel">
+                    <h3>Partner with PulseRelief</h3>
+                    <form class="partner-form" id="partner-form">
+                        <label>
+                            Organization name
+                            <input type="text" name="org" placeholder="Starlight General Hospital" required />
+                        </label>
+                        <label>
+                            Organization type
+                            <select name="type" required>
+                                <option value="">Select type</option>
+                                <option>Hospital / Clinic</option>
+                                <option>School / University</option>
+                                <option>NGO / Non-profit</option>
+                                <option>Startup / Social enterprise</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+                        <label>
+                            Work email
+                            <input type="email" name="email" placeholder="you@organization.org" required />
+                        </label>
+                        <label>
+                            Region of operation
+                            <input type="text" name="region" placeholder="East Africa, South Asia, etc." />
+                        </label>
+                        <label>
+                            Organization description
+                            <textarea name="description" placeholder="Brief description of your organization and why you want to partner with us..." rows="4"></textarea>
+                        </label>
+                        <button class="btn primary" type="submit">Request sandbox access</button>
+                        <p class="form-note" id="partner-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container faq-layout">
+                <div>
+                    <h2>Questions in urgent moments</h2>
+                    <p class="section-lead">
+                        When you are under pressure, clarity matters. Here are the essentials.
+                    </p>
+                    <div class="faq-list" id="faq-list">
+                        <article class="faq-item">
+                            <button class="faq-question">How fast can funds actually be released?</button>
+                            <div class="faq-answer">
+                                <p>
+                                    For fully verified cases with connected providers, funds can be disbursed in
+                                    a few hours. Complex cases can take longer, but our entire flow is optimized
+                                    for hours, not weeks.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq-item">
+                            <button class="faq-question">How do you prevent fraud and fake emergencies?</button>
+                            <div class="faq-answer">
+                                <p>
+                                    We combine partner verification (hospitals, schools, NGOs), document checks,
+                                    behavioral patterns, and community reporting. Cases that fail checks never
+                                    reach the public feed.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq-item">
+                            <button class="faq-question">Can I choose exactly which case I support?</button>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes. You can fund specific cases or contribute to focused emergency pools
+                                    (e.g., pediatric care, flood response, startup survival) that auto-route to
+                                    the most urgent verified needs.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq-item">
+                            <button class="faq-question">Is this platform available in my country?</button>
+                            <div class="faq-answer">
+                                <p>
+                                    PulseRelief is built to be global-first. Even where we do not yet have
+                                    local partners, we collaborate with international organizations to validate
+                                    cases and deliver support.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <aside class="cta-panel">
+                    <h3>In a crisis right now?</h3>
+                    <p>
+                        If you or someone you support is facing an emergency, start a request and we will
+                        guide you step-by-step. It takes about 5 minutes.
+                    </p>
+                    <button class="btn primary" data-open-modal="request-modal">Start an emergency request</button>
+                    <p class="cta-panel-meta">
+                        For life-threatening situations, always contact local emergency services first.
+                    </p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-section">
+                <div class="logo logo-text">Pulse<span>Relief</span></div>
+                <p class="footer-description">
+                    Emergency-first fundraising platform connecting verified urgent cases with ready donors in real-time.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-6.5-6.232h-2.5v3.5h2.5v7.5h4v-7.5h3l.5-3.5h-3.5v-2c0-.828.672-1.5 1.5-1.5h2v-3.5h-2c-2.761 0-5 2.239-5 5v2h-3v3.5h3v7.5h4v-7.5h3.5z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919.058-1.265.07-1.644.07-4.849 0-3.204-.013-3.583-.07-4.849-.149-3.225-1.664-4.771-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-058 1.265-.069 1.645-.069 4.849 0 3.204.012 3.584.069 4.849.149 3.227 1.664 4.771 4.919.058 1.265.07 1.645.07 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919.058-1.265.07-1.645.07-4.849zm-4.844-6.194c0-3.933-3.185-7.116-7.116-7.116-3.931 0-7.116 3.183-7.116 7.116 0 3.933 3.185 7.116 7.116 7.116 3.931 0 7.116-3.183 7.116-7.116zm-1.976-3.654a1.876 1.876 0 100 3.751 1.876 1.876 0 000-3.751zm6.644 0a1.876 1.876 0 100 3.751 1.876 1.876 0 000-3.751z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Platform</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#live-cases">Live emergencies</a></li>
+                    <li><a href="#crisis-map">Crisis map</a></li>
+                    <li><a href="#impact-reports">Impact reports</a></li>
+                    <li><a href="#advanced-verification">Verification</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Get Involved</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#get-started">Request help</a></li>
+                    <li><a href="#live-cases">Donate now</a></li>
+                    <li><a href="#partners">Become a partner</a></li>
+                    <li><a href="#volunteer">Volunteer</a></li>
+                    <li><a href="#campaigns">Start campaign</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#faq">Help Center</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="#privacy">Privacy policy</a></li>
+                    <li><a href="#terms">Terms of service</a></li>
+                    <li><a href="#safety">Safety & security</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p class="newsletter-description">Stay updated with our latest emergency relief efforts and impact stories.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <div class="app-download">
+                    <p class="app-text">Download our app</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.05 20.28c-.98.95-2.05.8-4.09.35l-5.51-2.36-5.51 2.36c-2.04.45-3.11.6-4.09-.35-.98-.95-.98-2.05-.98-4.09V8c0-2.04 0-3.14.98-4.09.98-.95 2.05-.8 4.09-.35l5.51 2.36c2.04.45 3.11.6 4.09-.35.98-.95.98-2.05.98-4.09V8.19c0-2.04 0-3.14-.98-4.09z"/>
+                            </svg>
+                            App Store
+                        </a>
+                        <a href="#" class="app-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M20.16,10.81L20.16,10.81Z"/>
+                            </svg>
+                            Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2026 PulseRelief. All rights reserved.</p>
+                        <p class="footer-disclaimer">Prototype experience · Not a live fundraising service</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
+                        <a href="#cookies">Cookies</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                    <div class="footer-badges">
+                        <span class="badge">🔒 Secured by SSL</span>
+                        <span class="badge">🛡️ PCI DSS Compliant</span>
+                        <span class="badge">🌍 Global Impact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Request Emergency Help Modal -->
+    <div class="modal" id="request-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="request-modal-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            <h2 id="request-modal-title">Start an emergency request</h2>
+            <p class="modal-lead">
+                This demo form shows how simple a real emergency flow could feel.
+            </p>
+            <form class="modal-form" id="request-form">
+                <label>
+                    What kind of emergency is this?
+                    <select name="type" required>
+                        <option value="">Select one</option>
+                        <option>Medical</option>
+                        <option>Education</option>
+                        <option>Disaster relief</option>
+                        <option>Small startup crisis</option>
+                    </select>
+                </label>
+                <label>
+                    <span class="label-text">📍 Where is this happening?</span>
+                    <input type="text" name="location" placeholder="City, Country (e.g., Lagos, Nigeria)" required />
+                    <button type="button" class="location-btn" onclick="getCurrentLocation()" title="Use my current location">
+                        📍 Use My Location
+                    </button>
+                    <span class="field-hint">Please provide your city and country for verification purposes</span>
+                </label>
+                <label>
+                    How much is needed in the next 72 hours?
+                    <input type="number" name="amount" min="1" step="1" placeholder="e.g., 5000" required />
+                </label>
+                <label>
+                    Urgent funds needed within
+                    <select name="neededWithin" required>
+                        <option value="">Select timeframe</option>
+                        <option value="1">1 hour</option>
+                        <option value="6">6 hours</option>
+                        <option value="12">12 hours</option>
+                        <option value="24">24 hours</option>
+                        <option value="48">48 hours</option>
+                        <option value="72">72 hours</option>
+                        <option value="168">7 days</option>
+                    </select>
+                </label>
+                <label>
+                    Briefly describe what happened
+                    <textarea name="story" rows="3" placeholder="1–3 sentences" required></textarea>
+                </label>
+                <label>
+                    Who can help us verify this quickly?
+                    <input type="text" name="verifier" placeholder="Hospital, NGO, school, or partner" list="verifier-orgs" />
+                </label>
+                <datalist id="verifier-orgs">
+                    <option value="World Health Organization (WHO)"></option>
+                    <option value="International Committee of the Red Cross (ICRC)"></option>
+                    <option value="International Federation of Red Cross and Red Crescent Societies (IFRC)"></option>
+                    <option value="UNICEF"></option>
+                    <option value="UNHCR"></option>
+                    <option value="World Food Programme (WFP)"></option>
+                    <option value="Médecins Sans Frontières (MSF) / Doctors Without Borders"></option>
+                    <option value="Save the Children"></option>
+                    <option value="International Rescue Committee (IRC)"></option>
+                    <option value="Oxfam"></option>
+                    <option value="CARE"></option>
+                    <option value="World Vision"></option>
+                    <option value="Plan International"></option>
+                    <option value="Catholic Relief Services (CRS)"></option>
+                    <option value="Direct Relief"></option>
+                    <option value="International Medical Corps"></option>
+                    <option value="Partners In Health (PIH)"></option>
+                    <option value="Rotary International"></option>
+                    <option value="Lions Clubs International"></option>
+                    <option value="Local Government Health Department"></option>
+                    <option value="Local Police Station"></option>
+                    <option value="Local Fire Department"></option>
+                    <option value="Community Health Clinic / Primary Health Center"></option>
+                    <option value="Nearest Public Hospital"></option>
+                    <option value="Nearest Private Hospital"></option>
+                    <option value="School Principal / University Registrar"></option>
+                </datalist>
+                
+                <!-- File Upload Section for Proof -->
+                <div class="file-upload-section">
+                    <label class="file-upload-label">
+                        <span class="label-text">📎 Upload Proof Documents</span>
+                        <p class="upload-hint">Upload bills, receipts, medical reports, or any supporting documents</p>
+                    </label>
+                    
+                    <div class="file-upload-area" id="file-upload-area">
+                        <input type="file" id="file-input" name="proof-documents" accept=".jpg,.jpeg,.png" multiple hidden />
+                        
+                        <div class="upload-placeholder">
+                            <div class="upload-icon">📤</div>
+                            <p class="upload-text">Drag files here or <span class="upload-link">click to browse</span></p>
+                            <p class="upload-formats">Accepted: JPG, PNG (Max 5MB each)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="files-preview" id="files-preview"></div>
+                    
+                    <!-- AI Verification Results -->
+                    <div class="ai-verification-panel" id="ai-verification-panel" style="display: none;">
+                        <div class="verification-header">
+                            <span class="verification-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="google-logo">
+                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                </svg>
+                            </span>
+                            <h4>AI Document Verification</h4>
+                            <span class="verification-badge" id="verification-status">Analyzing...</span>
+                        </div>
+                        
+                        <div class="verification-results" id="verification-results">
+                            <div class="verification-item">
+                                <span class="result-label">🏥 Hospital/Institution:</span>
+                                <span class="result-value" id="extracted-institution">—</span>
+                            </div>
+                            <div class="verification-item">
+                                <span class="result-label">💰 Total Amount:</span>
+                                <span class="result-value" id="extracted-amount">—</span>
+                            </div>
+                            <div class="verification-item">
+                                <span class="result-label">📅 Document Date:</span>
+                                <span class="result-value" id="extracted-date">—</span>
+                            </div>
+                            <div class="verification-item">
+                                <span class="result-label">🔍 Document Type:</span>
+                                <span class="result-value" id="extracted-type">—</span>
+                            </div>
+                            <div class="verification-item">
+                                <span class="result-label">✅ Trust Score:</span>
+                                <span class="result-value trust-score" id="trust-score">—</span>
+                            </div>
+                        </div>
+                        
+                        <div class="verification-warnings" id="verification-warnings" style="display: none;"></div>
+                        
+                        <div class="extracted-text-section" id="extracted-text-section" style="display: none;">
+                            <button type="button" class="text-toggle" onclick="toggleExtractedText()">
+                                <span>📄 View Extracted Text</span>
+                                <span class="toggle-arrow">▼</span>
+                            </button>
+                            <pre class="extracted-text" id="extracted-text" style="display: none;"></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="upload-info">
+                        <span>💡</span>
+                        <span>Upload medical bills, hospital receipts, repair quotes, educational documents, or any proof of emergency. Our AI will automatically verify the documents.</span>
+                    </div>
+                </div>
+                
+                <button class="btn primary" type="submit">Preview my case page</button>
+                <p class="form-note" id="request-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Staff Pending Request Details Modal -->
+    <div class="modal" id="staff-request-details-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="staff-request-details-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            <h2 id="staff-request-details-title">Request Details</h2>
+            <p class="modal-lead" id="staff-request-details-subtitle"></p>
+            <div class="modal-form" id="staff-request-details-body">
+                <p><strong>Requester:</strong> <span id="staff-request-details-requester">—</span></p>
+                <p><strong>Email:</strong> <span id="staff-request-details-email">—</span></p>
+                <p><strong>Type:</strong> <span id="staff-request-details-type">—</span></p>
+                <p><strong>Location:</strong> <span id="staff-request-details-location">—</span></p>
+                <p><strong>Amount Requested:</strong> <span id="staff-request-details-amount">—</span></p>
+                <p><strong>Urgency:</strong> <span id="staff-request-details-urgency">—</span></p>
+                <p><strong>Status:</strong> <span id="staff-request-details-status">—</span></p>
+                <p><strong>Submitted:</strong> <span id="staff-request-details-submitted">—</span></p>
+                <p><strong>Description:</strong> <span id="staff-request-details-description">—</span></p>
+                <p><strong>Verifier:</strong> <span id="staff-request-details-verifier">—</span></p>
+                <p><strong>Proof Photos:</strong></p>
+                <div id="staff-request-details-proof-gallery" class="proof-gallery"></div>
+                <p><strong>AI Verification:</strong> <span id="staff-request-details-ai-status">—</span></p>
+                <pre id="staff-request-details-ai-text" class="ai-verification-text" aria-label="AI verification extracted text"></pre>
+                <p><strong>Proof Files:</strong> <span id="staff-request-details-files">—</span></p>
+            </div>
+            <div class="request-actions" style="margin-top: 1rem; justify-content: flex-end;">
+                <button type="button" class="btn secondary" data-close-modal>Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partner Request Details Modal -->
+    <div class="modal" id="partner-details-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="partner-details-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            <h2 id="partner-details-title">Partner Request Details</h2>
+            <div class="modal-form">
+                <p><strong>Organization:</strong> <span id="partner-details-org">—</span></p>
+                <p><strong>Type:</strong> <span id="partner-details-type">—</span></p>
+                <p><strong>Email:</strong> <span id="partner-details-email">—</span></p>
+                <p><strong>Region:</strong> <span id="partner-details-region">—</span></p>
+                <p><strong>Status:</strong> <span id="partner-details-status">—</span></p>
+                <p><strong>Submitted:</strong> <span id="partner-details-submitted">—</span></p>
+                <p><strong>Description:</strong> <span id="partner-details-description">—</span></p>
+            </div>
+            <div class="modal-actions" style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: flex-end;">
+                <button type="button" class="btn secondary" data-close-modal>Close</button>
+                <button type="button" id="partner-approve-btn" class="btn primary">Approve</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proof Image Lightbox Modal -->
+    <div class="modal" id="proof-image-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog proof-image-dialog" role="dialog" aria-modal="true" aria-labelledby="proof-image-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            <h2 id="proof-image-title">Proof Photo</h2>
+            <div class="proof-image-stage">
+                <img id="proof-image-preview" alt="Proof photo preview" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Modal -->
+    <div class="modal" id="donate-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog payment-modal" role="dialog" aria-modal="true" aria-labelledby="donate-modal-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            <h2 id="donate-modal-title">💝 Support this Emergency</h2>
+            <p class="modal-lead">
+                Choose an amount and select your payment method. All transactions are encrypted and secure.
+            </p>
+            <form class="modal-form payment-form" id="donate-form">
+                <!-- Quick Amount Selection -->
+                <div class="quick-amounts">
+                    <label class="quick-amount-label">Quick Amounts:</label>
+                    <div class="amount-buttons">
+                        <button type="button" class="amount-btn" data-amount="25">$25</button>
+                        <button type="button" class="amount-btn" data-amount="50">$50</button>
+                        <button type="button" class="amount-btn" data-amount="100">$100</button>
+                        <button type="button" class="amount-btn" data-amount="250">$250</button>
+                        <button type="button" class="amount-btn" data-amount="500">$500</button>
+                    </div>
+                </div>
+
+                <!-- Custom Amount -->
+                <label class="form-label">
+                    <span class="label-text">💰 Custom Amount</span>
+                    <div class="amount-input-group">
+                        <select id="currency-select" class="currency-select" onchange="updateDonationDisplay()">
+                            <option value="USD">🇺🇸 USD - US Dollar</option>
+                            <option value="EUR">🇪🇺 EUR - Euro</option>
+                            <option value="GBP">🇬🇧 GBP - British Pound</option>
+                            <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                            <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                            <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                            <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                            <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                            <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                            <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                            <option value="BRL">🇧🇷 BRL - Brazilian Real</option>
+                            <option value="MXN">🇲🇽 MXN - Mexican Peso</option>
+                            <option value="ZAR">🇿🇦 ZAR - South African Rand</option>
+                            <option value="NGN">🇳🇬 NGN - Nigerian Naira</option>
+                            <option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+                            <option value="PHP">🇵🇭 PHP - Philippine Peso</option>
+                            <option value="THB">🇹🇭 THB - Thai Baht</option>
+                            <option value="VND">🇻🇳 VND - Vietnamese Dong</option>
+                            <option value="PKR">🇵🇰 PKR - Pakistani Rupee</option>
+                        </select>
+                        <input type="number" name="amount" min="5" step="1" value="50" class="amount-input" onchange="updateDonationDisplay()" oninput="updateDonationDisplay()" />
+                        <span class="currency-symbol" id="currency-symbol">$</span>
+                    </div>
+                </label>
+                
+                <!-- Conversion Display -->
+                <div class="currency-conversion-info" id="conversion-info" style="display: none;">
+                    <span class="conversion-text" id="conversion-text">≈ $50.00 USD</span>
+                </div>
+
+                <!-- Installment Plans Section -->
+                <div class="installment-plans-section" id="installment-section" style="display: none;">
+                    <label class="installment-toggle">
+                        <input type="checkbox" id="use-installments" name="useInstallments" onchange="toggleInstallmentPlans()" />
+                        <span class="toggle-label">🗓️ Pay in Installments (for large donations)</span>
+                    </label>
+                    
+                    <div class="installment-options" id="installment-options" style="display: none;">
+                        <p class="installment-hint">Spread your contribution over several months to make a larger impact.</p>
+                        <div class="installment-grid">
+                            <label class="installment-option">
+                                <input type="radio" name="installmentPlan" value="3" checked onchange="updateDonationDisplay()" />
+                                <span class="plan-card">
+                                    <span class="plan-months">3 Months</span>
+                                    <span class="plan-monthly-amount" id="plan-3-amount">$0/mo</span>
+                                </span>
+                            </label>
+                            <label class="installment-option">
+                                <input type="radio" name="installmentPlan" value="6" onchange="updateDonationDisplay()" />
+                                <span class="plan-card">
+                                    <span class="plan-months">6 Months</span>
+                                    <span class="plan-monthly-amount" id="plan-6-amount">$0/mo</span>
+                                </span>
+                            </label>
+                            <label class="installment-option">
+                                <input type="radio" name="installmentPlan" value="12" onchange="updateDonationDisplay()" />
+                                <span class="plan-card">
+                                    <span class="plan-months">12 Months</span>
+                                    <span class="plan-monthly-amount" id="plan-12-amount">$0/mo</span>
+                                </span>
+                            </label>
+                        </div>
+                        <p class="installment-total-note">Total amount: <span id="installment-total-display">$0.00</span></p>
+                    </div>
+                </div>
+
+                <!-- Donor Information -->
+                <div class="donor-info-section">
+                    <label class="form-label">
+                        <span class="label-text">👤 Your Name (optional)</span>
+                        <input type="text" name="name" placeholder="You can remain anonymous" />
+                    </label>
+                    <label class="form-label">
+                        <span class="label-text">📧 Email for Receipt (optional)</span>
+                        <input type="email" name="email" placeholder="you@example.com" />
+                    </label>
+                </div>
+
+                <!-- Payment Methods Section -->
+                <div class="payment-methods-section">
+                    <label class="payment-method-label">
+                        <span class="label-text">🔒 Payment Method (Encrypted)</span>
+                    </label>
+                    <div class="payment-methods-grid">
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="google-pay" />
+                            <span class="method-content">
+                                <span class="method-icon google-icon">
+                                    <svg viewBox="0 0 48 48" width="24" height="24">
+                                        <path fill="#4285F4" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C34.5 3.6 29.7 1 24 1 14.7 1 6.9 6.9 3.6 15.1l7 5.4C12.2 14.2 17.6 9.5 24 9.5z"/>
+                                        <path fill="#34A853" d="M46.1 24.5c0-1.5-.1-2.9-.4-4.3H24v8.2h12.4c-.5 2.7-2.1 5-4.4 6.6l6.8 5.3c4-3.7 6.3-9.1 6.3-15.8z"/>
+                                        <path fill="#FBBC05" d="M10.6 28.5c-.8-2.3-.8-4.8 0-7.1l-7-5.4C1.3 20.2 0 24 0 28s1.3 7.8 3.6 11.9l7-5.4z"/>
+                                        <path fill="#EA4335" d="M24 47c5.7 0 10.5-1.9 14-5.1l-6.8-5.3c-1.9 1.3-4.3 2-7.2 2-6.4 0-11.8-4.3-13.7-10.1l-7 5.4C6.9 41.1 14.7 47 24 47z"/>
+                                    </svg>
+                                </span>
+                                <span class="method-name">Google Pay</span>
+                                <span class="method-security">🔐 Encrypted</span>
+                            </span>
+                        </label>
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="upi" />
+                            <span class="method-content">
+                                <span class="method-icon">📱</span>
+                                <span class="method-name">UPI</span>
+                                <span class="method-security">🔐 Secure</span>
+                            </span>
+                        </label>
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="qr-code" />
+                            <span class="method-content">
+                                <span class="method-icon">📲</span>
+                                <span class="method-name">QR Code</span>
+                                <span class="method-security">🔐 Encrypted</span>
+                            </span>
+                        </label>
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="credit-card" />
+                            <span class="method-content">
+                                <span class="method-icon">💳</span>
+                                <span class="method-name">Credit Card</span>
+                                <span class="method-security">🔐 Encrypted</span>
+                            </span>
+                        </label>
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="debit-card" />
+                            <span class="method-content">
+                                <span class="method-icon">💳</span>
+                                <span class="method-name">Debit Card</span>
+                                <span class="method-security">🔐 Encrypted</span>
+                            </span>
+                        </label>
+                        <label class="payment-method-option">
+                            <input type="radio" name="paymentMethod" value="paypal" />
+                            <span class="method-content">
+                                <span class="method-icon">₽</span>
+                                <span class="method-name">PayPal</span>
+                                <span class="method-security">🔐 Encrypted</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Google Pay Section -->
+                <div class="payment-method-details" id="google-pay-section" style="display: none;">
+                    <div class="method-info-header">
+                        <svg viewBox="0 0 48 48" width="28" height="28" style="vertical-align: middle; margin-right: 8px;">
+                            <path fill="#4285F4" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C34.5 3.6 29.7 1 24 1 14.7 1 6.9 6.9 3.6 15.1l7 5.4C12.2 14.2 17.6 9.5 24 9.5z"/>
+                            <path fill="#34A853" d="M46.1 24.5c0-1.5-.1-2.9-.4-4.3H24v8.2h12.4c-.5 2.7-2.1 5-4.4 6.6l6.8 5.3c4-3.7 6.3-9.1 6.3-15.8z"/>
+                            <path fill="#FBBC05" d="M10.6 28.5c-.8-2.3-.8-4.8 0-7.1l-7-5.4C1.3 20.2 0 24 0 28s1.3 7.8 3.6 11.9l7-5.4z"/>
+                            <path fill="#EA4335" d="M24 47c5.7 0 10.5-1.9 14-5.1l-6.8-5.3c-1.9 1.3-4.3 2-7.2 2-6.4 0-11.8-4.3-13.7-10.1l-7 5.4C6.9 41.1 14.7 47 24 47z"/>
+                        </svg>
+                        Google Pay Payment
+                    </div>
+                    <p class="method-description">Fast, secure payments with your Google Account</p>
+                    <button type="button" id="google-pay-button" class="btn primary gpay-button" style="width: 100%; margin-top: 1rem;">
+                        <svg viewBox="0 0 48 48" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
+                            <path fill="#ffffff" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C34.5 3.6 29.7 1 24 1 14.7 1 6.9 6.9 3.6 15.1l7 5.4C12.2 14.2 17.6 9.5 24 9.5z"/>
+                            <path fill="#ffffff" d="M46.1 24.5c0-1.5-.1-2.9-.4-4.3H24v8.2h12.4c-.5 2.7-2.1 5-4.4 6.6l6.8 5.3c4-3.7 6.3-9.1 6.3-15.8z"/>
+                            <path fill="#ffffff" d="M10.6 28.5c-.8-2.3-.8-4.8 0-7.1l-7-5.4C1.3 20.2 0 24 0 28s1.3 7.8 3.6 11.9l7-5.4z"/>
+                            <path fill="#ffffff" d="M24 47c5.7 0 10.5-1.9 14-5.1l-6.8-5.3c-1.9 1.3-4.3 2-7.2 2-6.4 0-11.8-4.3-13.7-10.1l-7 5.4C6.9 41.1 14.7 47 24 47z"/>
+                        </svg>
+                        Pay with Google Pay
+                    </button>
+                </div>
+
+                <!-- UPI Section -->
+                <div class="payment-method-details" id="upi-section" style="display: none;">
+                    <label class="form-label">
+                        <span class="label-text">📱 UPI ID / VPA</span>
+                        <input type="text" name="upiId" placeholder="yourname@upi" class="upi-input" />
+                    </label>
+                    <p class="method-description">Enter your UPI ID (e.g., name@okhdfcbank or name@googlepay)</p>
+                    <button type="button" class="btn primary" style="width: 100%; margin-top: 1rem;" onclick="initializeUPIPayment(event)">
+                        📱 Pay via UPI
+                    </button>
+                </div>
+
+                <!-- QR Code Section -->
+                <div class="payment-method-details" id="qr-code-section" style="display: none;">
+                    <div class="method-info-header">📲 QR Code Payment</div>
+                    <p class="method-description">Scan this code with your payment app to donate</p>
+                    <div class="qr-code-container" id="qr-code-display">
+                        <div id="qrcode" class="qr-code-box"></div>
+                    </div>
+                    
+                    <!-- Transaction Info -->
+                    <div class="qr-info-box">
+                        <p><strong>Amount:</strong> <span id="qr-amount">$50</span></p>
+                        <p><strong>Transaction ID:</strong> <code id="qr-reference-id">TXN-000000-00000</code></p>
+                    </div>
+                    
+                    <!-- Session and Generation Info -->
+                    <div class="qr-session-details" id="qr-session-info">
+                        <!-- Dynamically populated -->
+                    </div>
+                    
+                    <!-- Payment Apps Info -->
+                    <div class="qr-info-box">
+                        <p><strong>💳 Use any payment app:</strong></p>
+                        <p>Google Pay • PhonePe • Paytm • BHIM • WhatsApp Pay • Gpay</p>
+                    </div>
+                    
+                    <button type="button" class="btn secondary" onclick="downloadQRCode()" style="width: 100%; margin-top: 0.8rem;">
+                        ⬇️ Download QR Code
+                    </button>
+                </div>
+
+                <!-- Card Details (shown when credit/debit card selected) -->
+                <div class="card-details-section" id="card-details-section" style="display: none;">
+                    <label class="form-label">
+                        <span class="label-text">Card Number</span>
+                        <div class="card-input-wrapper">
+                            <input type="text" name="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19" class="card-input" />
+                            <span class="encryption-indicator">🔐</span>
+                        </div>
+                    </label>
+                    <div class="card-details-row">
+                        <label class="form-label">
+                            <span class="label-text">Expiry Date</span>
+                            <input type="text" name="cardExpiry" placeholder="MM/YY" maxlength="5" />
+                        </label>
+                        <label class="form-label">
+                            <span class="label-text">CVV</span>
+                            <div class="cvv-input-wrapper">
+                                <input type="text" name="cardCVV" placeholder="•••" maxlength="3" />
+                                <span class="encryption-indicator">🔐</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p class="encryption-note">🔒 Your card details are encrypted using AES-256 encryption and never stored on our servers.</p>
+                </div>
+
+                <!-- Security Information -->
+                <div class="security-info">
+                    <div class="security-badge">
+                        <span class="badge-icon">🔒</span>
+                        <span class="badge-text">Bank-Grade Encryption (SSL/TLS)</span>
+                    </div>
+                    <div class="security-badge">
+                        <span class="badge-icon">✓</span>
+                        <span class="badge-text">PCI DSS Compliant</span>
+                    </div>
+                </div>
+
+                <!-- Amount Summary -->
+                <div class="amount-summary">
+                    <div class="summary-row">
+                        <span>Donation Amount:</span>
+                        <span class="summary-amount">$<span id="summary-amount">50</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Payment Method:</span>
+                        <span class="summary-method"><span id="summary-method">Credit Card</span></span>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <label class="terms-checkbox">
+                    <input type="checkbox" name="terms" required />
+                    <span>I agree to the donation terms and privacy policy</span>
+                </label>
+
+                <!-- Submit Button -->
+                <button class="btn primary donate-btn" type="submit">
+                    <span class="btn-icon">💳</span>
+                    <span class="btn-text">Complete Secure Payment</span>
+                </button>
+                <p class="form-note" id="donate-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thank You Page Modal -->
+    <div class="modal" id="thank-you-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-dialog thank-you-dialog" role="dialog" aria-modal="true" aria-labelledby="thank-you-title">
+            <button class="modal-close" data-close-modal>&times;</button>
+            
+            <div class="thank-you-container">
+                <!-- Success Checkmark Animation -->
+                <div class="success-animation">
+                    <div class="checkmark">
+                        <div class="checkmark-circle"></div>
+                        <div class="checkmark-check"></div>
+                    </div>
+                </div>
+
+                <!-- Thank You Content -->
+                <h2 id="thank-you-title" class="thank-you-heading">Thank You for Your Generosity!</h2>
+                
+                <div class="thank-you-message">
+                    <p class="donation-confirmed">Your donation of <span class="donation-amount" id="thank-you-amount">$50</span> has been successfully confirmed.</p>
+                    <p class="impact-text">You're directly helping someone in critical need. Real impact, right now.</p>
+                </div>
+
+                <!-- Donation Details -->
+                <div class="receipt-details">
+                    <div class="detail-row">
+                        <span class="detail-label">💝 Donation Amount</span>
+                        <span class="detail-value" id="receipt-amount">$50.00</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">💳 Payment Method</span>
+                        <span class="detail-value" id="receipt-method">Credit Card</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">📅 Date & Time</span>
+                        <span class="detail-value" id="receipt-date">Jan 4, 2026 - 3:45 PM</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">🆔 Transaction ID</span>
+                        <span class="detail-value transaction-id" id="receipt-txn-id">TXN-2026-001234</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">🏥 Supporting Case</span>
+                        <span class="detail-value" id="receipt-case">Medical Emergency</span>
+                    </div>
+                </div>
+
+                <!-- Email Receipt Section -->
+                <div class="email-receipt-section">
+                    <label class="email-label">
+                        <span class="label-text">📧 Send Receipt to Email</span>
+                        <input type="email" id="receipt-email-input" placeholder="your@email.com" class="receipt-email-input" />
+                    </label>
+                    <button class="btn primary send-receipt-btn" onclick="sendEmailReceipt()">Send Receipt</button>
+                </div>
+
+                <!-- Email Preview -->
+                <div class="email-preview-section" id="email-preview-section" style="display: none;">
+                    <div class="preview-toggle">
+                        <button class="preview-btn active" onclick="showEmailPreview()">📧 Preview Email</button>
+                    </div>
+                    <div class="email-preview-container" id="email-preview-container" style="display: none;">
+                        <div class="email-preview">
+                            <div class="email-header">PulseRelief Donation Receipt</div>
+                            <div class="email-body" id="email-preview-content">
+                                <!-- Email preview will be populated here -->
+                            </div>
+                            <div class="email-footer">
+                                <p>Thank you for making a difference!</p>
+                                <p>© 2026 PulseRelief. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Information -->
+                <div class="impact-box">
+                    <h3>🌍 Your Impact</h3>
+                    <p>Your donation joins thousands of others helping people in crisis. We'll send you updates as this case progresses.</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="thank-you-actions">
+                    <button class="btn secondary" onclick="downloadReceipt()">⬇️ Download Receipt</button>
+                    <button class="btn secondary" onclick="shareOnSocial()">📤 Share on Social</button>
+                    <button class="btn primary" data-close-modal>Continue to Dashboard</button>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="thank-you-footer">
+                    <p class="footer-note">A detailed receipt has been sent to your email. Your donation is tax-deductible. <a href="#" class="footer-link">View tax information</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Google Maps JavaScript API (replace YOUR_API_KEY with your own key before the hackathon) -->
+    <!-- Currency Conversion System -->
+    <script src="auth-system.js?v=donor-seed-1"></script>
+    <script src="currency-conversion.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/2.14.0/qrious.min.js"></script>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-header" class="chatbot-header">
+            <h3>PulseRelief</h3>
+            <button id="chatbot-close" class="chatbot-close">×</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Ask about our service...">
+            <button id="chatbot-send" class="chatbot-send">Send</button>
+        </div>
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">💬</button>
+    
+    <!-- Dashboard Modal -->
+    <div id="dashboard-modal" class="dashboard-modal">
+        <div class="dashboard-overlay" id="dashboard-overlay"></div>
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <div class="header-left">
+                    <button class="dashboard-back" id="dashboard-back" style="display: none;">← Back</button>
+                    <h2>PulseRelief Dashboard</h2>
+                </div>
+                <button class="dashboard-close" id="dashboard-close">×</button>
+            </div>
+            <div class="dashboard-content">
+                <div class="dashboard-login">
+                    <div class="login-tabs">
+                        <button class="login-tab active" data-tab="user-login">Volunteer Login</button>
+                        <button class="login-tab" data-tab="donor">Donor Login</button>
+                        <button class="login-tab" data-tab="user-signup">Create Account</button>
+                        <button class="login-tab" data-tab="staff">Staff Login</button>
+                        <button class="login-tab" data-tab="admin">Admin Login</button>
+                    </div>
+                    
+                    <!-- User Login Form -->
+                    <form class="login-form" id="user-login-form" data-form="user-login">
+                        <div class="form-group">
+                            <label for="user-email">Email</label>
+                            <input type="email" id="user-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-password">Password</label>
+                            <input type="password" id="user-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn primary">Login as Volunteer</button>
+                    </form>
+
+                    <!-- Donor Login Form -->
+                    <form class="login-form" id="donor-login-form" data-form="donor" style="display: none;">
+                        <div class="form-group">
+                            <label for="donor-email">Email</label>
+                            <input type="email" id="donor-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-password">Password</label>
+                            <input type="password" id="donor-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn primary">Login as Donor</button>
+                    </form>
+                    
+                    <!-- User Signup Form -->
+                    <form class="login-form" id="user-signup-form" data-form="user-signup" style="display: none;">
+                        <button type="button" class="btn secondary" id="signup-scroll-down-btn">Scroll Down</button>
+                        <div class="form-group">
+                            <label for="signup-account-type">Account Type</label>
+                            <select id="signup-account-type" name="accountType" required>
+                                <option value="user">Volunteer</option>
+                                <option value="donor">Donor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" required placeholder="Minimum 6 characters">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm">Confirm Password</label>
+                            <input type="password" id="signup-confirm" name="confirm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-phone">Phone Number</label>
+                            <input type="tel" id="signup-phone" name="phone" required placeholder="e.g., +91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-country">Country</label>
+                            <select id="signup-country" name="country" required>
+                                <option value="">Select your country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="IN">India</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="BR">Brazil</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn primary" id="signup-submit-btn">Sign Up</button>
+                        <button type="button" class="btn secondary" id="signup-back-to-login-btn">Back to Login</button>
+                    </form>
+                    
+                    <!-- Staff Login Form -->
+                    <form class="login-form" id="staff-login-form" data-form="staff" style="display: none;">
+                        <div class="form-group">
+                            <label for="staff-email">Staff Email</label>
+                            <input type="email" id="staff-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="staff-password">Staff Password</label>
+                            <input type="password" id="staff-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn primary">Login as Staff</button>
+                    </form>
+                    
+                    <!-- Admin Login Form -->
+                    <form class="login-form" id="admin-login-form" data-form="admin" style="display: none;">
+                        <div class="form-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Admin Password</label>
+                            <input type="password" id="admin-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn primary">Login as Admin</button>
+                    </form>
+                </div>
+                
+                <div class="dashboard-main" style="display: none;">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-user-info">
+                            <h3 id="dashboard-user-name">User Dashboard</h3>
+                            <span id="dashboard-user-type">User</span>
+                        </div>
+                        <!-- User Navigation -->
+                        <nav class="dashboard-nav user-nav" id="user-nav">
+                            <button class="nav-item active" data-view="profile">Profile</button>
+                            <button class="nav-item" data-view="bank-details">Bank Details</button>
+                            <button class="nav-item" data-view="my-donations">My Donations</button>
+                            <button class="nav-item" data-view="my-requests">My Requests</button>
+                            <button class="nav-item" data-view="logout">Logout</button>
+                        </nav>
+
+                        <!-- Donor Navigation -->
+                        <nav class="dashboard-nav donor-nav" id="donor-nav" style="display: none;">
+                            <button class="nav-item active" data-view="donor-site">Site Details</button>
+                            <button class="nav-item" data-view="donor-donate">Donation Options</button>
+                            <button class="nav-item" data-view="logout">Logout</button>
+                        </nav>
+                        <!-- Staff Navigation -->
+                        <nav class="dashboard-nav staff-nav" id="staff-nav" style="display: none;">
+                            <button class="nav-item active staff-nav-item" data-view="pending-requests">Pending Requests</button>
+                            <button class="nav-item staff-nav-item" data-view="partner-requests">Partner Requests</button>
+                            <button class="nav-item staff-nav-item" data-view="active-cases">Active Cases</button>
+                            <button class="nav-item staff-nav-item" data-view="staff-analytics">Analytics</button>
+                            <button class="nav-item staff-nav-item" data-view="staff-settings">Settings</button>
+                            <button class="nav-item staff-nav-item" data-view="logout">Logout</button>
+                        </nav>
+                        <!-- Admin Navigation -->
+                        <nav class="dashboard-nav admin-nav" id="admin-nav" style="display: none;">
+                            <button class="nav-item active admin-nav-item" data-view="admin-overview">Overview</button>
+                            <button class="nav-item admin-nav-item" data-view="staff-management">Staff Management</button>
+                            <button class="nav-item admin-nav-item" data-view="create-staff">Add Staff</button>
+                            <button class="nav-item admin-nav-item" data-view="admin-users">Users</button>
+                            <button class="nav-item admin-nav-item" data-view="admin-cases">Cases</button>
+                            <button class="nav-item admin-nav-item" data-view="admin-analytics">Analytics</button>
+                            <button class="nav-item admin-nav-item" data-view="admin-settings">Settings</button>
+                            <button class="nav-item admin-nav-item" data-view="logout">Logout</button>
+                        </nav>
+                    </div>
+                    <div class="dashboard-views">
+                        <!-- Profile View -->
+                        <div class="dashboard-view active" id="profile-view">
+                            <h3>👤 My Profile</h3>
+                            <div class="profile-info">
+                                <p><strong>Name:</strong> <span id="profile-name">John Doe</span></p>
+                                <p><strong>Email:</strong> <span id="profile-email">john@example.com</span></p>
+                                <p><strong>Phone Number:</strong> <span id="profile-phone">—</span></p>
+                                <p><strong>Member Since:</strong> <span id="profile-join-date">Jan 1, 2023</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Donor Views -->
+                        <div class="dashboard-view" id="donor-site-view" style="display: none;">
+                            <h3>ℹ️ Site Details</h3>
+                            <div class="profile-info">
+                                <p><strong>Platform:</strong> PulseRelief</p>
+                                <p><strong>Mission:</strong> Fast, transparent emergency fundraising with verification-first workflows.</p>
+                                <p><strong>How donations are used:</strong> Donations go to verified emergency cases displayed on the site.</p>
+                                <p><strong>Support:</strong> support@pulserelief.org</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-view" id="donor-donate-view" style="display: none;">
+                            <div class="view-header-flex">
+                                <h3>💳 Donation Options</h3>
+                                <button class="btn primary sm" id="donor-donate-now-btn">
+                                    <span>➕</span> Donate Now
+                                </button>
+                            </div>
+                            <div class="empty-state">
+                                <p>Select a live case on the home page, or click Donate Now to open the donation form.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bank Details View -->
+                        <div class="dashboard-view" id="bank-details-view">
+                            <h3>🏦 Bank Account Details</h3>
+                            <form id="bank-details-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="account-holder-name">Account Holder Name</label>
+                                        <input type="text" id="account-holder-name" name="accountHolderName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bank-name">Bank Name</label>
+                                        <input type="text" id="bank-name" name="bankName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="account-number">Account Number</label>
+                                        <input type="text" id="account-number" name="accountNumber" required placeholder="•••• •••• •••• ••••">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="routing-number">IFSC Code</label>
+                                        <input type="text" id="routing-number" name="routingNumber" required placeholder="•••••••••">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-type">Account Type</label>
+                                    <select id="account-type" name="accountType">
+                                        <option value="checking">Checking</option>
+                                        <option value="savings">Savings</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn primary">Save Bank Details</button>
+                            </form>
+                        </div>
+                        
+                        <!-- My Donations View -->
+                        <div class="dashboard-view" id="my-donations-view">
+                            <div class="view-header-flex">
+                                <h3>💝 My Donations</h3>
+                                <button class="btn primary sm" id="dashboard-donate-now-btn">
+                                    <span>➕</span> Donate Now
+                                </button>
+                            </div>
+                            <h4 class="dashboard-section-title">Last 24 Hours</h4>
+                            <div class="donations-list" id="my-donations-list">
+                                <!-- Dynamically populated (Last 24 Hours) -->
+                            </div>
+                            <h4 class="dashboard-section-title" style="margin-top: 1.1rem;">Previous Cases</h4>
+                            <div class="donations-list" id="my-donations-history-list">
+                                <!-- Dynamically populated (Older than 24 Hours) -->
+                            </div>
+                        </div>
+                        
+                        <!-- My Requests View -->
+                        <div class="dashboard-view" id="my-requests-view">
+                            <h3>📋 My Requests</h3>
+                            <h4 class="dashboard-section-title">Last 24 Hours</h4>
+                            <div class="requests-list" id="my-requests-list">
+                                <!-- Dynamic User Requests (Last 24 Hours) -->
+                                <div class="empty-state">
+                                    <p>You haven't submitted any emergency requests yet.</p>
+                                </div>
+                            </div>
+                            <h4 class="dashboard-section-title" style="margin-top: 1.1rem;">Previous Cases</h4>
+                            <div class="requests-list" id="my-requests-history-list">
+                                <!-- Dynamic User Requests (Older than 24 Hours) -->
+                                <div class="empty-state">
+                                    <p>No previous cases yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Staff Views (for staff login) -->
+                        <div class="dashboard-view" id="pending-requests-view" style="display: none;">
+                            <h3>📋 Pending Emergency Requests</h3>
+                            <div class="requests-list" id="staff-pending-requests-list">
+                                <!-- Pending requests will be populated here dynamically -->
+                                <div class="empty-state">
+                                    <p>No pending emergency requests to review.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-view" id="active-cases-view">
+                            <h3>🔴 Active Cases</h3>
+                            <h4 class="dashboard-section-title">Last 24 Hours</h4>
+                            <div class="cases-list" id="staff-active-cases-list">
+                                <!-- Dynamic Staff Active Cases (Last 24 Hours) -->
+                                <div class="empty-state">
+                                    <p>No active cases currently.</p>
+                                </div>
+                            </div>
+                            <h4 class="dashboard-section-title" style="margin-top: 1.1rem;">Previous Cases</h4>
+                            <div class="cases-list" id="staff-active-cases-history-list">
+                                <!-- Dynamic Staff Active Cases (Older than 24 Hours) -->
+                                <div class="empty-state">
+                                    <p>No previous cases yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-view" id="partner-requests-view">
+                            <h3>🤝 Partner Requests</h3>
+                            <div class="requests-list" id="partner-requests-list">
+                                <!-- Partner requests will be populated here dynamically -->
+                                <div class="empty-state">
+                                    <p>No partner requests yet</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-view" id="active-cases-view-legacy" style="display: none;">
+                            <h3>🔴 Active Cases</h3>
+                            <div class="cases-list" id="staff-active-cases-list-legacy">
+                                <!-- Dynamic Staff Active Cases -->
+                                <div class="case-item">
+                                    <div class="case-info">
+                                        <h4>Emergency surgery for road accident victim</h4>
+                                        <p class="case-category">Medical • ICU</p>
+                                        <p class="case-location">Nairobi, Kenya</p>
+                                        <div class="case-progress">
+                                            <div class="progress-bar"><span style="width: 62%"></span></div>
+                                            <div class="progress-meta">
+                                                <span>$6,200 of $10,000</span>
+                                                <span>62% funded</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn secondary">View Details</button>
+                                        <button class="btn primary">Update</button>
+                                    </div>
+
+                                    <!-- Emergency Timeline -->
+                                    <div class="case-timeline">
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Submitted</span>
+                                        </div>
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Verified</span>
+                                        </div>
+                                        <div class="timeline-step active">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Funded</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Resolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-item">
+                                    <div class="case-info">
+                                        <h4>Clean water & shelter kits after flash floods</h4>
+                                        <p class="case-category">Disaster relief • Floods</p>
+                                        <p class="case-location">Assam, India</p>
+                                        <div class="case-progress">
+                                            <div class="progress-bar"><span style="width: 44%"></span></div>
+                                            <div class="progress-meta">
+                                                <span>$8,800 of $20,000</span>
+                                                <span>44% funded</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="case-actions">
+                                        <button class="btn secondary">View Details</button>
+                                        <button class="btn primary">Update</button>
+                                    </div>
+
+                                    <!-- Emergency Timeline -->
+                                    <div class="case-timeline">
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Submitted</span>
+                                        </div>
+                                        <div class="timeline-step active">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Verified</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Funded</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Resolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Staff Views -->
+                        <div class="dashboard-view" id="staff-analytics-view">
+                            <h3>📊 Dashboard Analytics</h3>
+                            <div class="analytics-grid">
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Total Requests</div>
+                                    <div class="analytics-value">156</div>
+                                    <div class="analytics-meta">+12 this week</div>
+                                </div>
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Approved Cases</div>
+                                    <div class="analytics-value">42</div>
+                                    <div class="analytics-meta">$285,000 disbursed</div>
+                                </div>
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Pending Review</div>
+                                    <div class="analytics-value">18</div>
+                                    <div class="analytics-meta">Average 2.5 hours</div>
+                                </div>
+                                <div class="analytics-card">
+                                    <div class="analytics-label">Success Rate</div>
+                                    <div class="analytics-value">94%</div>
+                                    <div class="analytics-meta">Cases approved</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-view" id="staff-settings-view">
+                            <h3>⚙️ Staff Settings</h3>
+                            <form id="staff-settings-form">
+                                <div class="form-group">
+                                    <label for="staff-notification-email">Notification Email</label>
+                                    <input type="email" id="staff-notification-email" name="notificationEmail" value="admin@pulserelief.org">
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-notification-alerts">
+                                        <input type="checkbox" id="staff-notification-alerts" name="alertsEnabled" checked>
+                                        Enable case alerts
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-review-role">Review Role</label>
+                                    <select id="staff-review-role" name="role">
+                                        <option>Case Reviewer</option>
+                                        <option>Partner Manager</option>
+                                        <option>Admin</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn primary">Save Settings</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Admin Dashboard Views -->
+                        
+                        <!-- Admin Overview -->
+                        <div class="dashboard-view" id="admin-overview-view" style="display: none;">
+                            <h3>📊 Admin Overview</h3>
+                            <div class="admin-overview-grid">
+                                <div class="stat-card">
+                                    <div class="stat-label">Total Users</div>
+                                    <div class="stat-value" id="total-users">847</div>
+                                    <div class="stat-change positive">↑ 45 Active today</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-label">Total Staff</div>
+                                    <div class="stat-value" id="total-staff">12</div>
+                                    <div class="stat-change">Management Team</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-label">Active Cases</div>
+                                    <div class="stat-value" id="total-cases">28</div>
+                                    <div class="stat-change positive">↑ 7 Ongoing</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-label">System Status</div>
+                                    <div class="stat-value" style="color: #22c55e;">✓ Operational</div>
+                                    <div class="stat-change">All systems normal</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Recent Activity Section -->
+                            <div class="admin-info-section">
+                                <h4>📋 Recent Activity</h4>
+                                <div class="activity-list" id="activity-list">
+                                    <div class="activity-item">
+                                        <span class="activity-type">👤 New User</span>
+                                        <span class="activity-text">Jane Smith registered today</span>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-type">🆘 Case Created</span>
+                                        <span class="activity-text">Medical emergency - Lagos, Nigeria</span>
+                                        <span class="activity-time">4 hours ago</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-type">💳 Donation</span>
+                                        <span class="activity-text">$500 donated via Google Pay</span>
+                                        <span class="activity-time">6 hours ago</span>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="activity-type">✅ Case Closed</span>
+                                        <span class="activity-text">Education case - 100% funded</span>
+                                        <span class="activity-time">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- System Information Section -->
+                            <div class="admin-info-section">
+                                <h4>ℹ️ System Information</h4>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <span class="info-label">Uptime</span>
+                                        <span class="info-value">99.8%</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Platform Version</span>
+                                        <span class="info-value">v2.0.1</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Database Status</span>
+                                        <span class="info-value" style="color: #22c55e;">✓ Connected</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">API Status</span>
+                                        <span class="info-value" style="color: #22c55e;">✓ Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Actions -->
+                            <div class="admin-info-section">
+                                <h4>⚡ Quick Actions</h4>
+                                <div class="quick-actions">
+                                    <button class="action-btn" id="admin-add-staff-btn">
+                                        ➕ Add New Staff
+                                    </button>
+                                    <button class="action-btn" id="admin-view-cases-btn">
+                                        📋 View All Cases
+                                    </button>
+                                    <button class="action-btn" id="admin-download-report-btn">
+                                        📥 Download Report
+                                    </button>
+                                    <button class="action-btn" id="admin-open-settings-btn">
+                                        ⚙️ Settings
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Staff Management -->
+                        <div class="dashboard-view" id="staff-management-view" style="display: none;">
+                            <h3>👥 Staff Management</h3>
+                            <div class="staff-list" id="staff-list">
+                                <div class="staff-card">
+                                    <div class="staff-info">
+                                        <div class="staff-avatar">👤</div>
+                                        <div class="staff-details">
+                                            <h4>Sarah Johnson</h4>
+                                            <p class="staff-role">Case Reviewer</p>
+                                            <p class="staff-email">sarah@pulserelief.com</p>
+                                            <p class="staff-dept">Case Review Department</p>
+                                        </div>
+                                    </div>
+                                    <div class="staff-stats">
+                                        <div class="stat"><span class="value">42</span><span class="label">Cases Reviewed</span></div>
+                                        <div class="stat"><span class="value">98%</span><span class="label">Approval Rate</span></div>
+                                    </div>
+                                    <div class="staff-actions">
+                                        <button class="btn secondary">Edit</button>
+                                        <button class="btn secondary">Reset Password</button>
+                                        <button class="btn danger">Remove</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="staff-card">
+                                    <div class="staff-info">
+                                        <div class="staff-avatar">👤</div>
+                                        <div class="staff-details">
+                                            <h4>Michael Chen</h4>
+                                            <p class="staff-role">Partner Manager</p>
+                                            <p class="staff-email">michael@pulserelief.com</p>
+                                            <p class="staff-dept">Partnership Department</p>
+                                        </div>
+                                    </div>
+                                    <div class="staff-stats">
+                                        <div class="stat"><span class="value">28</span><span class="label">Partners Managed</span></div>
+                                        <div class="stat"><span class="value">15</span><span class="label">Active Partnerships</span></div>
+                                    </div>
+                                    <div class="staff-actions">
+                                        <button class="btn secondary">Edit</button>
+                                        <button class="btn secondary">Reset Password</button>
+                                        <button class="btn danger">Remove</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="staff-card">
+                                    <div class="staff-info">
+                                        <div class="staff-avatar">👤</div>
+                                        <div class="staff-details">
+                                            <h4>Amara Okonkwo</h4>
+                                            <p class="staff-role">Support Staff</p>
+                                            <p class="staff-email">amara@pulserelief.com</p>
+                                            <p class="staff-dept">Customer Support</p>
+                                        </div>
+                                    </div>
+                                    <div class="staff-stats">
+                                        <div class="stat"><span class="value">156</span><span class="label">Tickets Resolved</span></div>
+                                        <div class="stat"><span class="value">4.8/5</span><span class="label">Satisfaction</span></div>
+                                    </div>
+                                    <div class="staff-actions">
+                                        <button class="btn secondary">Edit</button>
+                                        <button class="btn secondary">Reset Password</button>
+                                        <button class="btn danger">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Create Staff -->
+                        <div class="dashboard-view" id="create-staff-view" style="display: none;">
+                            <h3>➕ Add New Staff Member</h3>
+                            <form id="create-staff-form" class="admin-form">
+                                <div class="form-group">
+                                    <label for="staff-full-name">Full Name</label>
+                                    <input type="text" id="staff-full-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-email">Email Address</label>
+                                    <input type="email" id="staff-email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-password">Temporary Password</label>
+                                    <input type="password" id="staff-password" name="password" required placeholder="Minimum 6 characters">
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-role">Role</label>
+                                    <select id="staff-role" name="role" required>
+                                        <option value="reviewer">Case Reviewer</option>
+                                        <option value="manager">Partner Manager</option>
+                                        <option value="support">Support Staff</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="staff-department">Department</label>
+                                    <input type="text" id="staff-department" name="department" placeholder="e.g., Case Review, Partnership">
+                                </div>
+                                <button type="submit" class="btn primary">Add Staff Member</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Admin Users View -->
+                        <div class="dashboard-view" id="admin-users-view" style="display: none;">
+                            <h3>👤 Users Management</h3>
+                            <div class="users-list" id="users-list">
+                                <div class="user-card">
+                                    <div class="user-info">
+                                        <h4>John Doe</h4>
+                                        <p class="user-email">john@example.com</p>
+                                        <p class="user-country">🇰🇪 Kenya</p>
+                                    </div>
+                                    <div class="user-stats">
+                                        <div class="stat"><span class="value">5</span><span class="label">Donations</span></div>
+                                        <div class="stat"><span class="value">$750</span><span class="label">Total Given</span></div>
+                                    </div>
+                                    <div class="user-status verified">✓ Verified</div>
+                                </div>
+                                
+                                <div class="user-card">
+                                    <div class="user-info">
+                                        <h4>Aisha Patel</h4>
+                                        <p class="user-email">aisha@example.com</p>
+                                        <p class="user-country">🇮🇳 India</p>
+                                    </div>
+                                    <div class="user-stats">
+                                        <div class="stat"><span class="value">12</span><span class="label">Donations</span></div>
+                                        <div class="stat"><span class="value">$1,200</span><span class="label">Total Given</span></div>
+                                    </div>
+                                    <div class="user-status verified">✓ Verified</div>
+                                </div>
+                                
+                                <div class="user-card">
+                                    <div class="user-info">
+                                        <h4>David Smith</h4>
+                                        <p class="user-email">david@example.com</p>
+                                        <p class="user-country">🇿🇦 South Africa</p>
+                                    </div>
+                                    <div class="user-stats">
+                                        <div class="stat"><span class="value">3</span><span class="label">Cases Posted</span></div>
+                                        <div class="stat"><span class="value">68%</span><span class="label">Success Rate</span></div>
+                                    </div>
+                                    <div class="user-status pending">⏳ Pending</div>
+                                </div>
+                                
+                                <div class="user-card">
+                                    <div class="user-info">
+                                        <h4>Maria Garcia</h4>
+                                        <p class="user-email">maria@example.com</p>
+                                        <p class="user-country">🇧🇷 Brazil</p>
+                                    </div>
+                                    <div class="user-stats">
+                                        <div class="stat"><span class="value">8</span><span class="label">Donations</span></div>
+                                        <div class="stat"><span class="value">$2,100</span><span class="label">Total Given</span></div>
+                                    </div>
+                                    <div class="user-status verified">✓ Verified</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Admin Cases View -->
+                        <div class="dashboard-view" id="admin-cases-view" style="display: none;">
+                            <h3>📋 Cases Management</h3>
+                            <div class="cases-list" id="cases-list">
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <h4>Emergency Medical Surgery - ICU Support</h4>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="case-details">
+                                        <p class="detail-item"><strong>Location:</strong> 🇰🇪 Nairobi, Kenya</p>
+                                        <p class="detail-item"><strong>Category:</strong> Medical • Emergency</p>
+                                        <p class="detail-item"><strong>Submitter:</strong> John Doe</p>
+                                        <p class="detail-item"><strong>Posted:</strong> 5 days ago</p>
+                                    </div>
+                                    <div class="case-funding">
+                                        <div class="funding-bar"><span style="width: 72%"></span></div>
+                                        <p class="funding-text">$7,200 of $10,000 (72% funded)</p>
+                                    </div>
+                                    <button class="btn primary" onclick="alert('View case details')">View Details</button>
+
+                                    <!-- Emergency Timeline -->
+                                    <div class="case-timeline">
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Submitted</span>
+                                        </div>
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Verified</span>
+                                        </div>
+                                        <div class="timeline-step active">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Funded</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Resolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <h4>Disaster Relief - Flood Response Kits</h4>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                    <div class="case-details">
+                                        <p class="detail-item"><strong>Location:</strong> 🇮🇳 Assam, India</p>
+                                        <p class="detail-item"><strong>Category:</strong> Disaster • Floods</p>
+                                        <p class="detail-item"><strong>Submitter:</strong> NGO Partner</p>
+                                        <p class="detail-item"><strong>Posted:</strong> 2 days ago</p>
+                                    </div>
+                                    <div class="case-funding">
+                                        <div class="funding-bar"><span style="width: 48%"></span></div>
+                                        <p class="funding-text">$9,600 of $20,000 (48% funded)</p>
+                                    </div>
+                                    <button class="btn primary" onclick="alert('View case details')">View Details</button>
+
+                                    <!-- Emergency Timeline -->
+                                    <div class="case-timeline">
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Submitted</span>
+                                        </div>
+                                        <div class="timeline-step active">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Verified</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Funded</span>
+                                        </div>
+                                        <div class="timeline-step">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Resolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="case-card">
+                                    <div class="case-header">
+                                        <h4>Education Emergency - University Tuition</h4>
+                                        <span class="status-badge completed">Completed</span>
+                                    </div>
+                                    <div class="case-details">
+                                        <p class="detail-item"><strong>Location:</strong> 🇿🇦 Cape Town, South Africa</p>
+                                        <p class="detail-item"><strong>Category:</strong> Education • Tuition</p>
+                                        <p class="detail-item"><strong>Submitter:</strong> Aisha Patel</p>
+                                        <p class="detail-item"><strong>Posted:</strong> 8 days ago</p>
+                                    </div>
+                                    <div class="case-funding">
+                                        <div class="funding-bar"><span style="width: 100%"></span></div>
+                                        <p class="funding-text">$3,500 of $3,500 (100% funded)</p>
+                                    </div>
+                                    <button class="btn primary" onclick="alert('View case details')">View Details</button>
+
+                                    <!-- Emergency Timeline -->
+                                    <div class="case-timeline">
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Submitted</span>
+                                        </div>
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Verified</span>
+                                        </div>
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Funded</span>
+                                        </div>
+                                        <div class="timeline-step completed">
+                                            <div class="step-dot"></div>
+                                            <span class="step-label">Resolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Admin Analytics -->
+                        <div class="dashboard-view" id="admin-analytics-view" style="display: none;">
+                            <h3>📈 System Analytics</h3>
+                            <div class="analytics-dashboard">
+                                <div class="analytics-row">
+                                    <div class="analytics-card">
+                                        <h4>📊 User Registration Trend</h4>
+                                        <div class="analytics-content">
+                                            <p class="analytics-value">+247 new users this month</p>
+                                            <p class="analytics-subtitle">↑ 18% increase from last month</p>
+                                            <div class="mini-chart">📈 Steady growth</div>
+                                        </div>
+                                    </div>
+                                    <div class="analytics-card">
+                                        <h4>✅ Case Success Rate</h4>
+                                        <div class="analytics-content">
+                                            <p class="analytics-value">82.5%</p>
+                                            <p class="analytics-subtitle">Of cases successfully funded</p>
+                                            <div class="progress-bar"><span style="width: 82.5%"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analytics-row">
+                                    <div class="analytics-card">
+                                        <h4>⏱️ Average Response Time</h4>
+                                        <div class="analytics-content">
+                                            <p class="analytics-value">2.3 hours</p>
+                                            <p class="analytics-subtitle">Staff response to cases</p>
+                                            <p class="analytics-detail">↓ 15% faster than last week</p>
+                                        </div>
+                                    </div>
+                                    <div class="analytics-card">
+                                        <h4>💚 System Health</h4>
+                                        <div class="analytics-content">
+                                            <p class="analytics-value" style="color: #22c55e;">✓ 99.8% Uptime</p>
+                                            <p class="analytics-subtitle">All systems operational</p>
+                                            <p class="analytics-detail">Last downtime: 3 weeks ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="analytics-row">
+                                    <div class="analytics-card large">
+                                        <h4>💰 Total Donations & Impact</h4>
+                                        <div class="analytics-content">
+                                            <div class="impact-grid">
+                                                <div class="impact-item">
+                                                    <span class="impact-value">$124,580</span>
+                                                    <span class="impact-label">Total Funds Raised</span>
+                                                </div>
+                                                <div class="impact-item">
+                                                    <span class="impact-value">2,847</span>
+                                                    <span class="impact-label">Lives Impacted</span>
+                                                </div>
+                                                <div class="impact-item">
+                                                    <span class="impact-value">428</span>
+                                                    <span class="impact-label">Cases Completed</span>
+                                                </div>
+                                                <div class="impact-item">
+                                                    <span class="impact-value">$29.07</span>
+                                                    <span class="impact-label">Avg Donation Size</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Admin Settings -->
+                        <div class="dashboard-view" id="admin-settings-view" style="display: none;">
+                            <h3>⚙️ Admin Settings</h3>
+                            <form id="admin-settings-form" class="admin-form">
+                                <div class="form-group">
+                                    <label for="platform-name">Platform Name</label>
+                                    <input type="text" id="platform-name" name="platformName" value="PulseRelief">
+                                </div>
+                                <div class="form-group">
+                                    <label for="support-email">Support Email</label>
+                                    <input type="email" id="support-email" name="supportEmail" value="support@pulserelief.org">
+                                </div>
+                                <div class="form-group">
+                                    <label for="max-cases">Maximum Active Cases</label>
+                                    <input type="number" id="max-cases" name="maxCases" value="100">
+                                </div>
+                                <div class="form-group">
+                                    <label for="case-review-time">Case Review Time Limit (minutes)</label>
+                                    <input type="number" id="case-review-time" name="reviewTime" value="30">
+                                </div>
+                                <button type="submit" class="btn primary">Save Settings</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

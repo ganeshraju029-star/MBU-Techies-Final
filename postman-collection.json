@@ -1,0 +1,540 @@
+{
+  "info": {
+    "name": "PulseRelief API - Firebase",
+    "description": "Complete API collection for PulseRelief Emergency Fundraising Platform with Firebase backend",
+    "version": "1.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000/api",
+      "type": "string"
+    },
+    {
+      "key": "userToken",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "staffToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"Password123\",\n  \"country\": \"US\",\n  \"phone\": \"+1234567890\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"Password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login Staff",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@pulserelief.com\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/staff/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "staff", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Current User",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{userToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/auth/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "me"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{userToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Updated\",\n  \"phone\": \"+1234567890\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/profile",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "profile"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"userType\": \"user\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/forgot-password",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "forgot-password"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Emergency Cases",
+      "item": [
+        {
+          "name": "Get All Cases",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/emergency?page=1&limit=10&type=Medical",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "type",
+                  "value": "Medical"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Featured Cases",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/emergency/featured?limit=6",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "featured"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Case",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/emergency/{{caseId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "{{caseId}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Emergency Case",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{userToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Emergency Medical Treatment Needed\",\n  \"description\": \"Patient requires immediate surgery for appendicitis. Hospital has confirmed the urgency and provided cost estimate.\",\n  \"type\": \"Medical\",\n  \"subcategory\": \"Surgery\",\n  \"location\": {\n    \"address\": \"123 Main St, City, State\",\n    \"city\": \"New York\",\n    \"country\": \"USA\"\n  },\n  \"amount\": {\n    \"requested\": 5000,\n    \"currency\": \"USD\"\n  },\n  \"urgency\": \"high\",\n  \"verifier\": {\n    \"name\": \"Dr. Sarah Johnson\",\n    \"organization\": \"City General Hospital\",\n    \"contact\": \"+1-555-0123\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/emergency",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Case Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"verified\",\n  \"notes\": \"All documents verified. Case approved for funding.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/emergency/{{caseId}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "{{caseId}}", "status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Cases",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{userToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/emergency/my-cases?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "my-cases"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Impact Update",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Surgery Successful\",\n  \"description\": \"Patient underwent successful appendectomy and is now in recovery. Expected discharge in 2 days.\",\n  \"images\": [\"recovery_photo1.jpg\", \"recovery_photo2.jpg\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/emergency/{{caseId}}/impact",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "{{caseId}}", "impact"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Donations",
+      "item": [
+        {
+          "name": "Create Donation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 100,\n  \"currency\": \"USD\",\n  \"paymentMethod\": \"credit_card\",\n  \"caseId\": \"{{caseId}}\",\n  \"donorName\": \"Anonymous Donor\",\n  \"donorEmail\": \"donor@example.com\",\n  \"isAnonymous\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/donations",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Donations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/donations?page=1&limit=20&status=completed",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "status",
+                  "value": "completed"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Donations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{userToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/donations/my-donations?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations", "my-donations"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Donation Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\",\n  \"gatewayResponse\": {\"status\": \"success\", \"transaction_id\": \"txn_12345\"},\n  \"transactionId\": \"TXN-12345\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/donations/{{donationId}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations", "{{donationId}}", "status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Process Refund",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Donor requested refund due to duplicate payment\",\n  \"amount\": 100\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/donations/{{donationId}}/refund",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations", "{{donationId}}", "refund"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Utilities",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/../health",
+              "host": ["{{baseUrl}}"],
+              "path": ["..", "health"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Case Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/emergency/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["emergency", "stats"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Donation Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{staffToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/donations/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["donations", "stats"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Auto-set variables from previous responses if needed",
+          "if (pm.collectionVariables.get('userToken') === '') {",
+          "    pm.collectionVariables.set('userToken', 'your-user-jwt-token-here');",
+          "}",
+          "if (pm.collectionVariables.get('staffToken') === '') {",
+          "    pm.collectionVariables.set('staffToken', 'your-staff-jwt-token-here');",
+          "}"
+        ]
+      }
+    }
+  ]
+}
